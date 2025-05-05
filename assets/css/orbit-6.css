@@ -281,6 +281,24 @@ p {
   color: #fb866a;
 }
 
+.image-square {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 8px; /* optional */
+  background-color: white; /* this gives you the black bars */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 @media (max-width: 767.98px) {
   .sidebar-wrapper {
     position: static;
