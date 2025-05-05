@@ -293,7 +293,7 @@ p {
 .image-square img {
   width: 100%;
   height: 100%;
-  object-fit: fill; /*contain, cover */
+  object-fit: contain; /*contain, cover */
   display: block;
 }
 
