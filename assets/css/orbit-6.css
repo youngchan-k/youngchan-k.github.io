@@ -281,23 +281,6 @@ p {
   color: #fb866a;
 }
 
-.image-square {
-  width: 120px;
-  aspect-ratio: 1 / 1;                /* Enforces a square container */
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;                   /* Optional: hides overflow if needed */
-}
-
-.image-square img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;                /* or 'cover' if you want cropped thumbnails */
-  display: block;
-}
-
 
 @media (max-width: 767.98px) {
   .sidebar-wrapper {
