@@ -12,7 +12,6 @@
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- FontAwesome JS-->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
@@ -28,330 +27,12 @@
 
     <!-- Prevent FOUC (Flash of Unstyled Content) -->
     <style>
-        :root {
-            --primary-color: #5D78FF;
-            --secondary-color: #2E4057;
-            --accent-color: #FFB347;
-            --light-bg: #f8f9fa;
-            --dark-text: #333;
-            --light-text: #6c757d;
-        }
-
-        body {
-            font-family: 'Open Sans', 'Roboto', sans-serif;
-            background-color: #f5f7fa;
-            color: var(--dark-text);
-        }
-
         .preload * {
             -webkit-transition: none !important;
             -moz-transition: none !important;
             -ms-transition: none !important;
             -o-transition: none !important;
             transition: none !important;
-        }
-
-        .wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            overflow: hidden;
-            background-color: #fff;
-        }
-
-        .sidebar-wrapper {
-            background: linear-gradient(145deg, var(--secondary-color), #1a2942);
-            color: white;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .profile {
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .profile:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .name {
-            font-weight: 700;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: white;
-        }
-
-        .tagline {
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 400;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .contact-list li {
-            margin-bottom: 12px;
-            padding: 8px 12px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .contact-list li:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateX(5px);
-        }
-
-        .contact-list li a {
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .contact-list li a:hover {
-            color: white;
-        }
-
-        .contact-list li i {
-            width: 25px;
-            text-align: center;
-            margin-right: 8px;
-            color: var(--accent-color);
-        }
-
-        .section-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-            color: var(--secondary-color);
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 10px;
-        }
-
-        .section-title .icon-holder {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            margin-right: 10px;
-            box-shadow: 0 3px 8px rgba(93, 120, 255, 0.3);
-        }
-
-        .section {
-            padding: 30px;
-            margin-bottom: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .section:hover {
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            transform: translateY(-5px);
-        }
-
-        .resume-timeline-item-header {
-            background-color: white;
-            border-radius: 10px;
-            padding: 15px;
-            transition: all 0.3s ease;
-            border: 1px solid #eaeaea;
-        }
-
-        .resume-timeline-item-header:hover {
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
-            transform: translateY(-5px);
-            border-color: var(--primary-color);
-        }
-
-        .resume-timeline-item-header img {
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .resume-position-title {
-            color: var(--secondary-color);
-        }
-
-        .btn-outline-primary {
-            border-color: var(--primary-color);
-            color: var(--primary-color);
-            border-radius: 30px;
-            padding: 5px 15px;
-            font-size: 0.8rem;
-            transition: all 0.3s ease;
-        }
-
-        .btn-outline-primary:hover {
-            background-color: var(--primary-color);
-            color: white;
-            box-shadow: 0 5px 15px rgba(93, 120, 255, 0.3);
-        }
-
-        .badge {
-            padding: 6px 12px;
-            border-radius: 30px;
-            font-weight: 500;
-            font-size: 0.8rem;
-        }
-
-        .item {
-            margin-bottom: 30px;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: white;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .item:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            transform: translateY(-3px);
-        }
-
-        .job-title {
-            color: var(--secondary-color);
-            font-weight: 600;
-        }
-
-        .time {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .company {
-            color: var(--light-text);
-            font-style: italic;
-            margin-top: 8px;
-        }
-
-        .list-unstyled li {
-            margin-bottom: 8px;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .list-unstyled li i.fa-solid.fa-angle-right,
-        .list-unstyled li i.fa-solid.fa-check-circle {
-            position: absolute;
-            left: 0;
-            top: 4px;
-        }
-
-        .summary a {
-            color: var(--primary-color);
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .summary a:hover {
-            text-decoration: underline;
-        }
-
-        .bg-light {
-            background-color: var(--light-bg) !important;
-        }
-
-        .footer {
-            background-color: var(--secondary-color);
-            color: rgba(255, 255, 255, 0.7);
-            padding: 20px 0;
-            font-size: 0.9rem;
-        }
-
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        /* Media queries for better responsiveness */
-        @media (max-width: 991.98px) {
-            .wrapper {
-                flex-direction: column;
-                margin: 15px;
-                max-width: 100%;
-            }
-
-            .sidebar-wrapper {
-                width: 100%;
-                padding: 30px;
-            }
-
-            .profile-container {
-                text-align: center;
-            }
-
-            .contact-container {
-                max-width: 450px;
-                margin: 0 auto;
-            }
-
-            .main-wrapper {
-                padding: 10px;
-            }
-
-            .section {
-                padding: 20px;
-            }
-        }
-
-        /* Dark mode toggle */
-        .dark-mode-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .dark-mode-toggle:hover {
-            transform: scale(1.1);
-            background-color: var(--primary-color);
-        }
-
-        /* Back to top button */
-        .back-to-top {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            background-color: var(--accent-color);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            display: none;
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .back-to-top:hover {
-            transform: scale(1.1);
         }
     </style>
 </head>
@@ -362,7 +43,8 @@
             <div class="profile-container">
                 <img class="profile" src="assets/images/profile.jpg" alt="Profile" width="180" height="180"/>
                 <h1 class="name">Youngchan Kim</h1>
-                <h3 class="tagline">Deep Learning SW Engineer @ DEEPX</h3>
+                <h3 class="tagline">Machine Learning Engineer @ Beeble AI</h3>
+                <!-- <h3 class="tagline">Deep Learning SW Engineer @ DEEPX</h3> -->
             </div><!--//profile-container-->
 
             <div class="contact-container container-block">
@@ -434,14 +116,14 @@
 
                 <div class="item">
                     <div class="meta">
-                        <div class="upper-row d-flex justify-content-between align-items-center">
+                        <div class="upper-row">
                             <h3 class="job-title">Beeble AI</h3>
                             <div class="time">Apr 2024 -- May 2025</div>
                         </div>
                         <div class="company">Machine Learning Engineer</div>
                     </div>
                     <div class="details">
-                        <div class="mb-3">
+                        <div class="mb-2">
                             <i>Provide virtual lighting solutions that transform 2D footage into 3D relightable PBR assets and generate HDRI harmonized with virtual background</i>
                         </div>
                         <div>
@@ -602,7 +284,7 @@
 
                 <div class="item">
                     <div class="meta">
-                        <div class="upper-row d-flex justify-content-between align-items-center">
+                        <div class="upper-row">
                             <h3 class="job-title">Samsung Electronics DX (Digital Transformation) Training</h3>
                             <div class="time">Apr 2024</div>
                         </div>
@@ -612,7 +294,7 @@
 
                 <div class="item">
                     <div class="meta">
-                        <div class="upper-row d-flex justify-content-between align-items-center">
+                        <div class="upper-row">
                             <h3 class="job-title">POSCO AI Training - Deep Learning and Computer Vision</h3>
                             <div class="time">Oct 2022 / Jul 2023</div>
                         </div>
@@ -622,7 +304,7 @@
 
                 <div class="item">
                     <div class="meta">
-                        <div class="upper-row d-flex justify-content-between align-items-center">
+                        <div class="upper-row">
                             <h3 class="job-title">CSED700G Computational Imaging</h3>
                             <div class="time">Spring 2023</div>
                         </div>
@@ -633,12 +315,6 @@
             </section>
         </div><!--//main-body-->
     </div>
-
-    <!-- Back to top button -->
-    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
-
-    <!-- Dark mode toggle button -->
-    <button class="dark-mode-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button>
 
     <footer class="footer">
         <div class="container text-center">
@@ -660,78 +336,12 @@
             setTimeout(function() {
                 $('.sidebar-wrapper').addClass('animate__animated animate__fadeIn');
                 $('.name, .tagline').addClass('animate__animated animate__fadeInUp');
-                $('.contact-list li').addClass('animate__animated animate__fadeInLeft').each(function(index) {
-                    $(this).css('animation-delay', (index * 0.1) + 's');
-                });
-                $('.section').addClass('animate__animated animate__fadeIn').each(function(index) {
-                    $(this).css('animation-delay', (index * 0.1) + 's');
-                });
+                $('.contact-list li').addClass('animate__animated animate__fadeInLeft');
+                $('.section').addClass('animate__animated animate__fadeIn');
             }, 300);
         });
 
-        // Back to top button functionality
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 300) {
-                $('#backToTop').fadeIn();
-            } else {
-                $('#backToTop').fadeOut();
-            }
-        });
-
-        $('#backToTop').click(function() {
-            $('html, body').animate({scrollTop: 0}, 800);
-            return false;
-        });
-
-        // Dark mode toggle
-        $('#darkModeToggle').click(function() {
-            $('body').toggleClass('dark-mode');
-            if ($('body').hasClass('dark-mode')) {
-                $(this).html('<i class="fas fa-sun"></i>');
-                // Add dark mode styles
-                $('<style id="dark-mode-styles"></style>').appendTo('head').html(`
-                    body.dark-mode {
-                        background-color: #121212;
-                        color: #f5f5f5;
-                    }
-                    body.dark-mode .wrapper {
-                        background-color: #1e1e1e;
-                    }
-                    body.dark-mode .section {
-                        background-color: #2d2d2d;
-                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-                    }
-                    body.dark-mode .section-title {
-                        color: #f5f5f5;
-                        border-bottom: 2px solid #444;
-                    }
-                    body.dark-mode .item,
-                    body.dark-mode .resume-timeline-item-header {
-                        background-color: #2d2d2d;
-                        border-color: #444;
-                    }
-                    body.dark-mode .bg-light {
-                        background-color: #333 !important;
-                    }
-                    body.dark-mode .text-dark {
-                        color: #f5f5f5 !important;
-                    }
-                    body.dark-mode .job-title,
-                    body.dark-mode .resume-position-title {
-                        color: #f5f5f5;
-                    }
-                    body.dark-mode .summary a,
-                    body.dark-mode a:not(.btn) {
-                        color: var(--accent-color);
-                    }
-                `);
-            } else {
-                $(this).html('<i class="fas fa-moon"></i>');
-                $('#dark-mode-styles').remove();
-            }
-        });
-
-        // Add hover effects to project images
+        // Add slight hover effect to project images
         $('.resume-timeline-item-header').hover(
             function() {
                 $(this).find('img').css('transform', 'scale(1.05)');
