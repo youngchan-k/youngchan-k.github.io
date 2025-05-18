@@ -1,4 +1,4 @@
-/*! 
+/*!
  * Template Name: Orbit - Bootstrap 5 Resume/CV Template for Developers
  * Version: Bootstrap 5 v3.0
  * Author: Xiaoying Riley
@@ -8,12 +8,12 @@
 */
 body {
   font-family: "Roboto", sans-serif;
-  /* color: #545E6C; */
-  color: #000000;
-  background: #f5f5f5;
-  font-size: 14px;
+  color: #333333;
+  background: #f8f9fa;
+  font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,67 +21,71 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  /* color: #2e4049; */
-  color: #ff0000;
+  color: #4285F4;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 a:hover {
   text-decoration: underline;
-  /* color: #10171a; */
-  color: #000000;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
+  color: #1a73e8;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 a:focus {
   text-decoration: none;
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .wrapper {
-  /* background: #4B6A78; */
-  background: #3f3f3f;
-  max-width: 1080px;
+  background: #252934;
+  max-width: 1200px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   position: relative;
-  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .sidebar-wrapper {
-  /* background: #4B6A78; */
-  background: #3f3f3f;
+  background: #252934;
   position: absolute;
   left: 0;
-  /* right: 0; */
-  width: 240px;
+  width: 280px;
   height: 100%;
-  /* min-height: 800px; */
   color: #fff;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
 }
 .sidebar-wrapper a {
   color: #fff;
+  transition: all 0.3s ease;
+}
+.sidebar-wrapper a:hover {
+  color: #4285F4;
+  text-decoration: none;
 }
 .sidebar-wrapper .profile-container {
-  padding: 30px;
+  padding: 40px 30px;
   background: rgba(0, 0, 0, 0.2);
   text-align: center;
   color: #fff;
 }
 .sidebar-wrapper .name {
   font-size: 32px;
-  font-weight: 900;
-  margin-top: 0;
+  font-weight: 700;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 .sidebar-wrapper .tagline {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
   font-weight: 400;
   margin-top: 0;
@@ -89,14 +93,27 @@ p {
 }
 .sidebar-wrapper .profile {
   margin-bottom: 15px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.sidebar-wrapper .profile:hover {
+  transform: scale(1.05);
+  border-color: rgba(66, 133, 244, 0.3);
 }
 .sidebar-wrapper .contact-list .svg-inline--fa {
-  margin-right: 5px;
-  font-size: 18px;
+  margin-right: 8px;
+  font-size: 16px;
   vertical-align: middle;
+  color: #4285F4;
 }
 .sidebar-wrapper .contact-list li {
   margin-bottom: 15px;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+.sidebar-wrapper .contact-list li:hover {
+  transform: translateX(5px);
 }
 .sidebar-wrapper .contact-list li:last-child {
   margin-bottom: 0;
@@ -162,143 +179,238 @@ p {
 .main-wrapper {
   background: #fff;
   padding: 60px;
-  padding-left: 300px;
-  /* padding-right: 300px; */
+  padding-left: 330px;
+  min-height: 100vh;
 }
 .main-wrapper .section-title {
   text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 500;
-  color: #2e4049;
+  font-size: 22px;
+  font-weight: 600;
+  color: #252934;
   position: relative;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f1f1f1;
 }
 .main-wrapper .section-title .icon-holder {
-  width: 30px;
-  height: 30px;
-  margin-right: 8px;
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
   display: inline-block;
   color: #fff;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  /* background: #2e4049; */
-  background: #3f3f3f;
+  background: #4285F4;
   text-align: center;
   font-size: 16px;
   position: relative;
   top: -2px;
-  padding-top: 2px;
+  padding-top: 6px;
+  box-shadow: 0 3px 8px rgba(66, 133, 244, 0.3);
 }
 .main-wrapper .section-title .icon-holder .svg-inline--fa {
-  font-size: 14px;
-  margin-top: 6px;
+  font-size: 16px;
 }
 .main-wrapper .section {
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 .main-wrapper .experiences-section .item {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main-wrapper .experiences-section .item:last-child {
+  border-bottom: none;
 }
 .main-wrapper .upper-row {
   position: relative;
   overflow: hidden;
-  margin-bottom: 2px;
+  margin-bottom: 8px;
 }
 .main-wrapper .job-title {
-  color: #3F4650;
-  font-size: 16px;
+  color: #252934;
+  font-size: 18px;
   margin-top: 0;
   margin-bottom: 0;
-  font-weight: 500;
+  font-weight: 600;
 }
 .main-wrapper .time {
   position: absolute;
   right: 0;
   top: 0;
-  /* color: #97AAC3; */
-  color: #3f3f3f;
+  color: #4285F4;
+  font-weight: 500;
+  background: rgba(66, 133, 244, 0.1);
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 14px;
 }
 .main-wrapper .company {
-  margin-bottom: 10px;
-  /* color: #97AAC3; */
-  color: #3f3f3f;
+  margin-bottom: 15px;
+  color: #555;
+  font-weight: 500;
+}
+.main-wrapper .details {
+  position: relative;
+  padding-left: 20px;
+}
+.main-wrapper .details:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 0;
+  width: 3px;
+  background: #f1f1f1;
 }
 .main-wrapper .project-title {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 500;
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  color: #252934;
 }
 .main-wrapper .projects-section .intro {
   margin-bottom: 30px;
 }
 .main-wrapper .projects-section .item {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+.main-wrapper .projects-section .item:hover {
+  transform: translateY(-3px);
 }
 
-.skillset .item {
-  margin-bottom: 15px;
-  overflow: hidden;
+.resume-timeline-item-header {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: 15px;
 }
-.skillset .level-title {
-  font-size: 14px;
-  margin-top: 0;
-  margin-bottom: 12px;
+.resume-timeline-item-header:hover {
+  background: rgba(66, 133, 244, 0.05);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
-.skillset .level-bar {
-  height: 12px;
-  background: #f5f5f5;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
+.resume-timeline-item-header img {
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
 }
-.skillset .theme-progress-bar {
-  background: #5f8697;
+.resume-timeline-item-header img:hover {
+  transform: scale(1.05);
+}
+
+.badge {
+  padding: 5px 10px;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.badge-dark {
+  background: #252934;
+}
+.badge-dark:hover {
+  background: #4285F4;
 }
 
 .footer {
-  padding: 30px;
-  padding-top: 60px;
+  padding: 15px 0;
+  background: #f8f9fa;
 }
 .footer .copyright {
-  line-height: 1.6;
-  color: #545E6C;
   font-size: 13px;
+  color: #999;
 }
-.footer .fa-heart {
-  color: #fb866a;
+.footer a {
+  color: #555;
 }
-
+.footer a:hover {
+  color: #4285F4;
+}
 
 @media (max-width: 767.98px) {
   .sidebar-wrapper {
     position: static;
-    width: inherit;
+    width: 100%;
+    padding-bottom: 30px;
   }
   .main-wrapper {
     padding: 30px;
+    padding-left: 30px;
+    min-height: auto;
   }
   .main-wrapper .time {
     position: static;
-    display: block;
+    display: inline-block;
     margin-top: 5px;
+    margin-bottom: 5px;
   }
   .main-wrapper .upper-row {
     margin-bottom: 0;
   }
+  .wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .resume-timeline-item-header .d-flex {
+    flex-direction: column;
+  }
+  .resume-timeline-item-header img {
+    margin-bottom: 15px;
+    max-width: 100%;
+    height: auto;
+  }
+  .resume-timeline-item-desc {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
+
+/* Fix for content jumps during animations */
+.animate__animated {
+  --animate-duration: 0.5s;
+}
+
+/* Ensure images don't overflow their containers */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent button overflow on small screens */
+.btn-sm {
+  white-space: normal;
+  margin-bottom: 5px;
+}
+
+/* Improve list spacing */
+.list-unstyled li {
+  margin-bottom: 10px;
+}
+
+/* Fix potential Safari flex issues */
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .main-wrapper {
+    padding: 40px;
+    padding-left: 300px;
+  }
+  .sidebar-wrapper {
+    width: 260px;
+  }
+}
+
+/* Fix for position sticky on some browsers */
+.wrapper {
+  overflow: visible;
+}
+
 @media (min-width: 992px) {
   .skillset .level-title {
     display: inline-block;
