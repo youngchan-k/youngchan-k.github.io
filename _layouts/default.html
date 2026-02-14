@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>{{ site.data.main_info.name }}</title>
+  <meta name="description" content="Homepage of Youngchan Kim">
+  <meta name="author" content="Youngchan Kim">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.data.main_info.name }}">
+  <meta property="og:description" content="{{ site.data.main_info.meta_description | default: 'Research profile of Youngchan Kim' }}">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/profile-pics/profile.jpeg">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/libs/external/skeleton/normalize.css">
+  <link rel="stylesheet" href="/libs/external/skeleton/skeleton.css">
+  <link rel="stylesheet" href="/libs/custom.css">
+
+  <!-- Font-Awesome -->
+  <link rel="stylesheet" href="/libs/external/font-awesome/css/font-awesome.min.css">
+
+  <!-- Academicons -->
+  <link rel="stylesheet" href="/libs/external/academicons/css/academicons.min.css">
+</head>
+
+<body>
+  <!-- Primary Page Layout -->
+  <div class="container">
+
+    <header class="header">
+      <div class="row">
+        <div class="three columns">
+          <a href="/">
+            <img class="u-max-full-width" src="{{ site.data.main_info.profile_pic }}" alt="{{ site.data.main_info.name }}">
+          </a>
+        </div>
+        <div class="nine columns main-description">
+          <h1>{{ site.data.main_info.name }}</h1>
+          <h5>{{ site.data.main_info.title }}</h5>
+          <p>
+            <span class="contact-link" onclick="window.open('mailto:{{ site.data.main_info.email }}')">
+              <i class="fa fa-envelope" aria-hidden="true"></i> Email
+            </span>
+            <span class="contact-link" onclick="window.open('{{ site.data.main_info.cv }}')">
+              <i class="fa fa-file-pdf-o" aria-hidden="true"></i> CV
+            </span>
+            <span class="contact-link" onclick="window.open('{{ site.data.main_info.linkedin }}')">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn
+            </span>
+            <span class="contact-link" onclick="window.open('{{ site.data.main_info.github }}')">
+              <i class="fa fa-github" aria-hidden="true"></i> Github
+            </span>
+            <span class="contact-link" onclick="window.open('{{ site.data.main_info.google_scholar }}')">
+              <i class="ai fa ai-google-scholar-square" aria-hidden="true"></i> Google Scholar
+            </span>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    {{ content }}
+
+    <footer class="footer">
+      <div class="row">
+        <div class="twelve columns footer-last-updated">
+          Last updated: {{ site.time | date: "%B %d, %Y" }}
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

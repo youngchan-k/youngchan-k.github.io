@@ -1,0 +1,44 @@
+papers:
+  # Multi-Dimensional Light Properties
+  - domain: "* Multi-Dimensional Light Properties *"
+
+  - title: "Hyperspectral Polarimetric BRDFs of Real-world Materials"
+    authors: "Yunseong Moon, Ryota Maeda, Suhyun Shin, Inseung Hwang, <b><u>Youngchan Kim</u></b>, Min H. Kim, Seung-Hwan Baek"
+    venue: "SIGGRAPH Asia 2025"
+    image: "assets/images/hpbrdf.png"
+    project: "https://yunseong0518.github.io/projects/hpBRDF/"
+    paper_pdf: "https://arxiv.org/pdf/2509.13779"
+    dataset: "https://huggingface.co/datasets/yunseongmoon/Hyperspectral-Polarimetric-BRDF"
+
+  - title: "Spectral and Polarization Vision: Spectro-polarimetric Real-world Dataset"
+    authors: "Yujin Jeon*, Eunsue Choi*, <b><u>Youngchan Kim</u></b>, Yunseong Moon, Khalid Omer, Felix Heide, Seung-Hwan Baek"
+    venue: "CVPR 2024 (highlight)"
+    image: "assets/images/spdata.png"
+    project: "https://eschoi.com/SPDataset/"
+    paper_pdf: "https://arxiv.org/pdf/2311.17396"
+    dataset: "https://huggingface.co/datasets/jyj7913/spectro-polarimetric"
+
+  - title: "Neural Spectro-polarimetric Fields"
+    authors: "<b><u>Youngchan Kim</u></b>, Wonjoon Jin, Sunghyun Cho, Seung-Hwan Baek"
+    venue: "SIGGRAPH Asia 2023"
+    image: "assets/images/nespof.png"
+    project: "https://youngchan-k.github.io/nespof"
+    paper_pdf: "https://arxiv.org/pdf/2306.12562"
+    code: "https://github.com/youngchan-k/NeSpoF"
+    dataset: "https://drive.google.com/drive/folders/1W7apuXPA3EkyUs8VgZgwdMpnc96aLXXJ"
+
+  # # Digital Me and Recommendation System
+  # - domain: "* Digital Me and Recommendation System *"
+
+  # - title: "Towards Minimally Domain-Dependent and Privacy-Preserving Architecture and Algorithms for Digital Me Services: EdNet and MIMIC-III Experiments"
+  #   authors: "Kyoung Jun Lee, Baek Jeong, <b><u>Youngchan Kim</u></b>, Suhyeon Kim"
+  #   venue: "HICSS 2025"
+  #   image: "assets/images/digitalme.png"
+  #   paper_pdf: "https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/2f094eb9-3795-4ef3-85a8-f85f3fcc581f/content"
+  #   code: "https://github.com/youngchan-k/amper"
+
+  # - title: "AMPER (Aim-Measure-Predict-Evaluate-Recommend): The Paradigm of Digital Me"
+  #   authors: "Kyoung Jun Lee, Baek Jeong, Yujeong Hwangbo, <b><u>Youngchan Kim</u></b>, Sungwon Bae, Taehoon Baek"
+  #   venue: "ICEC 2022"
+  #   image: "assets/images/amper.png"
+  #   paper_pdf: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11150700"

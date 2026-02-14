@@ -1,0 +1,154 @@
+---
+layout: default
+---
+<!-- ========== About ========== -->
+<div class="docs-section" id="about">
+  <h5><i class="fa fa-user"></i>About</h5>
+  <p>
+    I'm <b>Youngchan Kim</b>, a Ph.D. student in the <b><a href="https://www.mpi-inf.mpg.de/departments/visual-computing-and-artificial-intelligence">Dept. of Visual Computing and AI at MPI for Informatics</a></b>, advised by <b><a href="https://people.mpi-inf.mpg.de/~theobalt/">Prof. Christian Theobalt</a></b>.
+    My research interests focus on <b>generative human model and relighting</b> and <b>facial animation and motion synthesis</b> at the intersection of Computer Vision, Computer Graphics, and Machine Learning.
+  </p>
+  <p>
+    Previously, I completed my Master's degree at <b><a href="https://cg.postech.ac.kr">POSTECH Computer Graphics Lab</a></b> under the supervision of <b><a href="https://www.shbaek.com">Prof. Seung-Hwan Baek</a></b>,
+    working on <b>high-dimensional light properties</b> [<b><a href="https://youngchan-k.github.io/nespof">NeSpoF</a></b>, <b><a href="https://eschoi.com/SPDataset/">spDataset</a></b>] and <b>light-matter interaction modeling</b> [<b><a href="https://yunseong0518.github.io/projects/hpBRDF/">hpBRDF</a></b>].
+    Before pursuing graduate studies, I received my Bachelor's degree in Mathematics & Electrical and Electronic Engineering from Yonsei University.
+  </p>
+  <p>
+    ✅ Please feel free to <b><a href="mailto:kyc9618@gmail.com">contact me</a></b> if you have any questions or want to discuss potential collaborations!
+  </p>
+</div>
+
+
+<!-- ========== News ========== -->
+<div class="docs-section" id="news">
+  <h5><i class="fa fa-newspaper-o"></i>News</h5>
+  <p>
+    <span class="news-date">Apr 2026</span>
+    <span>
+      I’m thrilled to share that I've officially started my Ph.D. journey at <a href="https://www.mpi-inf.mpg.de/home">Max Planck Institute for Informatics</a>.
+      I will be conducting my research under the guidance of <a href="https://people.mpi-inf.mpg.de/~theobalt/">Prof. Christian Theobalt</a>.
+      I'm really grateful for this opportunity and looking forward to this new chapter ahead!
+    </span>
+  </p>
+</div>
+
+
+<!-- ========== Education ========== -->
+<div class="docs-section" id="education">
+  <h5><i class="fa fa-graduation-cap"></i>Education</h5>
+  <div class="paper">
+    <p class="title">
+      <b>Max Planck Institute for Informatics / Saarland University</b>
+      <b class="date-right">Apr 2026 – Present</b>
+    </p>
+    <p class="paper-info">
+      <span>Ph.D. in Computer Science</span>
+      <span class="location-right">Saarbrücken, Germany</span>
+    </p>
+  </div>
+
+  <div class="paper">
+    <p class="title">
+      <b>POSTECH</b>
+      <b class="date-right">Mar 2022 – Feb 2024</b>
+    </p>
+    <p class="paper-info">
+      <span>M.S. in Artificial Intelligence</span>
+      <span class="location-right">Pohang, South Korea</span>
+    </p>
+  </div>
+
+  <div class="paper">
+    <p class="title">
+      <b>Yonsei University</b>
+      <b class="date-right">Mar 2016 – Feb 2022</b>
+    </p>
+    <p class="paper-info">
+      <span>B.S. in Mathematics & Electrical and Electronic Engineering</span>
+      <span class="location-right">Seoul, South Korea</span>
+    </p>
+  </div>
+</div>
+
+
+<!-- ========== Publications ========== -->
+<div class="docs-section" id="publications">
+  <h5 style="margin-bottom: -20px;"><i class="fa fa-files-o"></i>Publications</h5>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="papers-selected">
+      {% assign papers = site.data.publications.papers %}
+      {% for paper in papers %}
+        <div class="paper">
+          <div class="row">
+            {% if paper.domain %}
+              <h6 class="paper-domain">{{ paper.domain }}</h6>
+            {% endif %}
+            <div class="three columns">
+              <div class="figure">
+                <img src="{{ paper.image }}" width="100%">
+              </div>
+            </div>
+
+            <div class="nine columns">
+              <p class="title"><b>{{ paper.title }}</b></p>
+              <p>{{ paper.authors }}</p>
+              <p><i>{{ paper.venue }}</i></p>
+              <div class="paper-buttons">
+                {% if paper.project %}
+                  <a class="button" href="{{ paper.project }}" target="_blank">Project</a>
+                {% endif %}
+
+                {% if paper.paper_pdf %}
+                  <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
+                {% endif %}
+
+                {% if paper.code %}
+                  <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+                {% endif %}
+
+                {% if paper.dataset %}
+                  <a class="button" href="{{ paper.dataset }}" target="_blank">Dataset</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== Experience ========== -->
+<div class="docs-section" id="experience">
+  <h5 style="margin-bottom: -20px;"><i class="fa fa-briefcase"></i>Experience</h5>
+
+  <ul class="timeline">
+    {% for exp in site.data.experience.experiences %}
+    <li>
+      {% if exp.category == "work" %}
+        <div class="direction-l">
+      {% elsif exp.category == "research" %}
+        <div class="direction-r">
+      {% endif %}
+        <div class="flag-wrapper">
+          <span class="flag">{{ exp.place }}</span>
+          <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
+        </div>
+        <div class="desc">
+          <b>{{ exp.title }}</b>
+          <br/>
+          {% if exp.subtitles %}
+            {% for s in exp.subtitles %}
+              {{ s }}{% unless forloop.last %}<br/>{% endunless %}
+            {% endfor %}
+          {% elsif exp.subtitle %}
+            {{ exp.subtitle }}
+          {% endif %}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
