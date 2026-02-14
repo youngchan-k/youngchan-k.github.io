@@ -121,32 +121,22 @@ layout: default
 
 
 <!-- ========== Experience ========== -->
-<div class="docs-section" id="experience">
+<div class="docs-section" id="resume">
   <h5 style="margin-bottom: -20px;"><i class="fa fa-briefcase"></i>Experience</h5>
 
   <ul class="timeline">
     {% for exp in site.data.experience.experiences %}
     <li>
       {% if exp.category == "work" %}
-        <div class="direction-l">
-      {% elsif exp.category == "research" %}
-        <div class="direction-r">
+      <div class="direction-l">
+      {% else %}
+      <div class="direction-r">
       {% endif %}
         <div class="flag-wrapper">
           <span class="flag">{{ exp.place }}</span>
           <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
         </div>
-        <div class="desc">
-          <b>{{ exp.title }}</b>
-          <br/>
-          {% if exp.subtitles %}
-            {% for s in exp.subtitles %}
-              {{ s }}{% unless forloop.last %}<br/>{% endunless %}
-            {% endfor %}
-          {% elsif exp.subtitle %}
-            {{ exp.subtitle }}
-          {% endif %}
-        </div>
+        <div class="desc"><b>{{ exp.title }}</b> <br/> {{ exp.subtitle }}</div>
       </div>
     </li>
     {% endfor %}
