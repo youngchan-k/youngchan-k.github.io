@@ -8,6 +8,7 @@ papers:
     image: "assets/images/hpbrdf.png"
     project: "https://yunseong0518.github.io/projects/hpBRDF/"
     paper_pdf: "https://arxiv.org/pdf/2509.13779"
+    code: "https://github.com/youngchan-k/hpBRDF"
     dataset: "https://huggingface.co/datasets/yunseongmoon/Hyperspectral-Polarimetric-BRDF"
 
   - title: "Spectral and Polarization Vision: Spectro-polarimetric Real-world Dataset"
