@@ -23,7 +23,7 @@ papers:
     authors: "<b><u>Youngchan Kim</u></b>, Wonjoon Jin, Sunghyun Cho, Seung-Hwan Baek"
     venue: "SIGGRAPH Asia 2023"
     image: "assets/images/nespof.png"
-    project: "https://youngchan-k.github.io/nespof"
+    project: "https://youngchan-k.github.io/NeSpoF"
     paper_pdf: "https://arxiv.org/pdf/2306.12562"
     code: "https://github.com/youngchan-k/NeSpoF"
     dataset: "https://drive.google.com/drive/folders/1W7apuXPA3EkyUs8VgZgwdMpnc96aLXXJ"
