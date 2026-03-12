@@ -124,7 +124,7 @@ body {
 
 .pub-year-divider {
   grid-column: 1 / -1;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #333;
   border-bottom: 1px solid #eee;
@@ -175,7 +175,7 @@ body {
 .pub-title {
   margin: 0;
   font-weight: 650;
-  font-size: 1.12rem;
+  font-size: 1.6rem;
   line-height: 1.3;
   min-width: 0;
 }
@@ -192,7 +192,7 @@ body {
 .pub-authors,
 .pub-venue {
   margin: 0.25rem 0 0 0;
-  font-size: 1.05rem;
+  font-size: 1.5rem;
 }
 .pub-authors { color: #374151; }
 .pub-venue { color: rgba(0, 0, 0, 0.5); }
@@ -215,7 +215,7 @@ body {
 }
 
 .pub-links a {
-  font-size: 1rem;
+  font-size: 1.4rem;
   text-decoration: none;
   border: 1px solid #eee;
   padding: 3px 10px;
