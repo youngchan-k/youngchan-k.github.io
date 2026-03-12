@@ -56,11 +56,111 @@ body {
   transform: scale(1.15);
 }
 
+/* ========== Site header (sticky nav bar) ========== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid #eee;
+  backdrop-filter: blur(8px);
+  margin: 0 -11px 0 -11px;
+  padding: 0 11px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.brand-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+.brand-title:hover {
+  color: #33C3F0;
+}
+
+.brand-subtitle {
+  font-size: 0.92rem;
+  color: rgba(0, 0, 0, 0.55);
+  margin-top: 2px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+.site-nav a:hover {
+  background: rgba(51, 195, 240, 0.08);
+  color: #33C3F0;
+}
+
+.nav-toggle {
+  display: none;
+  border: 1px solid #eee;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 11px;
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  background: rgba(51, 195, 240, 0.06);
+}
+
+.nav-toggle-bars {
+  display: block;
+  width: 18px;
+  height: 12px;
+  position: relative;
+}
+.nav-toggle-bars::before,
+.nav-toggle-bars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: currentColor;
+  border-radius: 999px;
+}
+.nav-toggle-bars::before {
+  top: 1px;
+  box-shadow: 0 5px 0 0 currentColor;
+}
+.nav-toggle-bars::after {
+  bottom: 1px;
+}
+
 /* ========== Sections ========== */
 .docs-section {
   border-top: 1px solid #eee;
   padding: 4rem 0;
   margin-bottom: 0;
+  scroll-margin-top: 80px;
 }
 
 .docs-section h5 .fa {
@@ -262,6 +362,34 @@ body {
 @media (min-width: 550px) {
   .header {
     margin-top: 5rem;
+  }
+}
+
+/* Site header: mobile nav */
+@media (max-width: 720px) {
+  .nav-toggle {
+    display: block;
+  }
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 11px;
+    right: 11px;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  }
+  .site-nav.open {
+    display: flex;
+  }
+  .site-nav a {
+    padding: 10px 12px;
+    border-radius: 10px;
   }
 }
 
