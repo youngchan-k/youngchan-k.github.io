@@ -25,9 +25,7 @@ layout: default
   <p>
     <span class="news-date">Apr 2026</span>
     <span>
-      I’m thrilled to share that I've officially started my Ph.D. journey at <a href="https://www.mpi-inf.mpg.de/home">Max Planck Institute for Informatics</a>.
-      I will be conducting my research under the guidance of <a href="https://people.mpi-inf.mpg.de/~theobalt/">Prof. Christian Theobalt</a>.
-      I'm really grateful for this opportunity and looking forward to this new chapter ahead!
+      I've officially started my Ph.D. journey at <a href="https://www.mpi-inf.mpg.de/home">Max Planck Institute for Informatics</a> under the guidance of <a href="https://people.mpi-inf.mpg.de/~theobalt/">Prof. Christian Theobalt</a>.
     </span>
   </p>
 </div>
@@ -48,7 +46,11 @@ layout: default
       {% endif %}
       <article class="pub-card">
         <div class="pub-thumb">
-          <img src="{{ paper.image }}" alt="" loading="lazy">
+          {% if paper.image contains '.mp4' or paper.image contains '.webm' %}
+            <video src="{{ paper.image }}" muted loop playsinline autoplay></video>
+          {% else %}
+            <img src="{{ paper.image }}" alt="" loading="lazy">
+          {% endif %}
         </div>
         <div class="pub-body">
           <div>

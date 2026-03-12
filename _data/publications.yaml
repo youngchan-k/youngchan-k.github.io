@@ -3,7 +3,7 @@ papers:
     year: 2025
     authors: "Yunseong Moon, Ryota Maeda, Suhyun Shin, Inseung Hwang, <b><u>Youngchan Kim</u></b>, Min H. Kim, Seung-Hwan Baek"
     venue: "SIGGRAPH Asia 2025"
-    image: "assets/images/hpbrdf.png"
+    image: "assets/images/hpBRDF.mp4"
     project: "https://yunseong0518.github.io/projects/hpBRDF/"
     paper_pdf: "https://arxiv.org/pdf/2509.13779"
     code: "https://github.com/youngchan-k/hpBRDF"
@@ -22,7 +22,7 @@ papers:
     year: 2023
     authors: "<b><u>Youngchan Kim</u></b>, Wonjoon Jin, Sunghyun Cho, Seung-Hwan Baek"
     venue: "SIGGRAPH Asia 2023"
-    image: "assets/images/nespof.png"
+    image: "assets/images/NeSpoF.mp4"
     project: "https://youngchan-k.github.io/NeSpoF"
     paper_pdf: "https://arxiv.org/pdf/2306.12562"
     code: "https://github.com/youngchan-k/NeSpoF"
