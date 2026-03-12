@@ -110,9 +110,6 @@ layout: default
       {% elsif paper.year %}
         {% assign prev_year = paper.year %}
       {% endif %}
-      {% if paper.domain %}
-        <h6 class="paper-domain">{{ paper.domain }}</h6>
-      {% endif %}
       <article class="pub-card">
         <div class="pub-thumb">
           <img src="{{ paper.image }}" alt="" loading="lazy">

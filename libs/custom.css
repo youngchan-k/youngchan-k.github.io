@@ -86,14 +86,6 @@ body {
   margin-bottom: 20px;
 }
 
-.paper-domain {
-  font-size: 1.5em;
-  margin-bottom: -20px;
-  margin-top: 50px;
-  font-variant: small-caps;
-  font-weight: bold;
-}
-
 .paper p {
   margin-bottom: 2px;
 }
@@ -132,7 +124,7 @@ body {
 
 .pub-year-divider {
   grid-column: 1 / -1;
-  font-size: 1.12rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #333;
   border-bottom: 1px solid #eee;
@@ -183,8 +175,8 @@ body {
 .pub-title {
   margin: 0;
   font-weight: 650;
-  font-size: 1.02rem;
-  line-height: 1.25;
+  font-size: 1.12rem;
+  line-height: 1.3;
   min-width: 0;
 }
 
@@ -200,7 +192,7 @@ body {
 .pub-authors,
 .pub-venue {
   margin: 0.25rem 0 0 0;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
 }
 .pub-authors { color: #374151; }
 .pub-venue { color: rgba(0, 0, 0, 0.5); }
@@ -223,7 +215,7 @@ body {
 }
 
 .pub-links a {
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-decoration: none;
   border: 1px solid #eee;
   padding: 3px 10px;

@@ -1,7 +1,4 @@
 papers:
-  # Multi-Dimensional Light Properties
-  - domain: "* Multi-Dimensional Light Properties *"
-
   - title: "Hyperspectral Polarimetric BRDFs of Real-world Materials"
     year: 2025
     authors: "Yunseong Moon, Ryota Maeda, Suhyun Shin, Inseung Hwang, <b><u>Youngchan Kim</u></b>, Min H. Kim, Seung-Hwan Baek"
@@ -30,9 +27,6 @@ papers:
     paper_pdf: "https://arxiv.org/pdf/2306.12562"
     code: "https://github.com/youngchan-k/NeSpoF"
     dataset: "https://drive.google.com/drive/folders/1W7apuXPA3EkyUs8VgZgwdMpnc96aLXXJ"
-
-  # # Digital Me and Recommendation System
-  # - domain: "* Digital Me and Recommendation System *"
 
   # - title: "Towards Minimally Domain-Dependent and Privacy-Preserving Architecture and Algorithms for Digital Me Services: EdNet and MIMIC-III Experiments"
   #   authors: "Kyoung Jun Lee, Baek Jeong, <b><u>Youngchan Kim</u></b>, Suhyeon Kim"
