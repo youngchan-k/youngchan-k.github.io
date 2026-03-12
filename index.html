@@ -1,28 +1,6 @@
 ---
 layout: default
 ---
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand" aria-label="Site">
-      <div class="brand-text">
-        <a href="/" class="brand-title">{{ site.data.main_info.name }}</a>
-        <div class="brand-subtitle">{{ site.data.main_info.title }}</div>
-      </div>
-    </div>
-
-    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
-      <span class="nav-toggle-bars" aria-hidden="true"></span>
-    </button>
-
-    <nav id="site-nav" class="site-nav" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#news">News</a>
-      <a href="#publications">Publications</a>
-    </nav>
-  </div>
-</header>
-
-
 <!-- ========== About ========== -->
 <div class="docs-section" id="about">
   <h5><i class="fa fa-user"></i><b>About</b></h5>
@@ -112,32 +90,3 @@ layout: default
     {% endfor %}
   </div>
 </div>
-
-<script>
-(function() {
-  var toggle = document.querySelector(".nav-toggle");
-  var nav = document.getElementById("site-nav");
-  if (!toggle || !nav) return;
-  function close() {
-    nav.classList.remove("open");
-    toggle.setAttribute("aria-expanded", "false");
-  }
-  function open() {
-    nav.classList.add("open");
-    toggle.setAttribute("aria-expanded", "true");
-  }
-  toggle.addEventListener("click", function() {
-    if (toggle.getAttribute("aria-expanded") === "true") close();
-    else open();
-  });
-  nav.addEventListener("click", function(e) {
-    if (e.target && e.target.tagName === "A") close();
-  });
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "Escape") close();
-  });
-  window.addEventListener("resize", function() {
-    if (window.innerWidth > 720) close();
-  });
-})();
-</script>
