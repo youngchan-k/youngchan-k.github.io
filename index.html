@@ -98,48 +98,59 @@ layout: default
 
 <!-- ========== Publications ========== -->
 <div class="docs-section" id="publications">
-  <h5 style="margin-bottom: -20px;"><i class="fa fa-files-o"></i>Publications</h5>
+  <h5 style="margin-bottom: 12px;"><i class="fa fa-files-o"></i>Publications</h5>
 
-  <div class="tab-content">
-    <div class="tab-pane active" id="papers-selected">
-      {% assign papers = site.data.publications.papers %}
-      {% for paper in papers %}
-        <div class="paper">
-          <div class="row">
-            {% if paper.domain %}
-              <h6 class="paper-domain">{{ paper.domain }}</h6>
+  <div class="pub-list" aria-live="polite">
+    {% assign papers_sorted = site.data.publications.papers | sort: "year" | reverse %}
+    {% assign prev_year = nil %}
+    {% for paper in papers_sorted %}
+      {% if paper.year != prev_year and paper.year %}
+        <div class="pub-year-divider">{{ paper.year }}</div>
+        {% assign prev_year = paper.year %}
+      {% elsif paper.year %}
+        {% assign prev_year = paper.year %}
+      {% endif %}
+      {% if paper.domain %}
+        <h6 class="paper-domain">{{ paper.domain }}</h6>
+      {% endif %}
+      <article class="pub-card">
+        <div class="pub-thumb">
+          <img src="{{ paper.image }}" alt="" loading="lazy">
+        </div>
+        <div class="pub-body">
+          <div>
+            <h3 class="pub-title clamp-2">
+              {% if paper.project %}
+                <a href="{{ paper.project }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+              {% elsif paper.paper_pdf %}
+                <a href="{{ paper.paper_pdf }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+              {% elsif paper.code %}
+                <a href="{{ paper.code }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+              {% elsif paper.dataset %}
+                <a href="{{ paper.dataset }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+              {% else %}
+                <span>{{ paper.title }}</span>
+              {% endif %}
+            </h3>
+            <p class="pub-authors clamp-1">{{ paper.authors }}</p>
+            <p class="pub-venue clamp-1"><em>{{ paper.venue }}</em></p>
+          </div>
+          <div class="pub-links" aria-label="Links">
+            {% if paper.project %}
+              <a href="{{ paper.project }}" target="_blank" rel="noopener noreferrer">Project</a>
             {% endif %}
-            <div class="three columns">
-              <div class="figure">
-                <img src="{{ paper.image }}" width="100%">
-              </div>
-            </div>
-
-            <div class="nine columns">
-              <p class="title"><b>{{ paper.title }}</b></p>
-              <p>{{ paper.authors }}</p>
-              <p><i>{{ paper.venue }}</i></p>
-              <div class="paper-buttons">
-                {% if paper.project %}
-                  <a class="button" href="{{ paper.project }}" target="_blank">Project</a>
-                {% endif %}
-
-                {% if paper.paper_pdf %}
-                  <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
-                {% endif %}
-
-                {% if paper.code %}
-                  <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-                {% endif %}
-
-                {% if paper.dataset %}
-                  <a class="button" href="{{ paper.dataset }}" target="_blank">Dataset</a>
-                {% endif %}
-              </div>
-            </div>
+            {% if paper.paper_pdf %}
+              <a href="{{ paper.paper_pdf }}" target="_blank" rel="noopener noreferrer">Paper</a>
+            {% endif %}
+            {% if paper.code %}
+              <a href="{{ paper.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+            {% endif %}
+            {% if paper.dataset %}
+              <a href="{{ paper.dataset }}" target="_blank" rel="noopener noreferrer">Dataset</a>
+            {% endif %}
           </div>
         </div>
-      {% endfor %}
-    </div>
+      </article>
+    {% endfor %}
   </div>
 </div>

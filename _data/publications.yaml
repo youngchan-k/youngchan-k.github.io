@@ -3,6 +3,7 @@ papers:
   - domain: "* Multi-Dimensional Light Properties *"
 
   - title: "Hyperspectral Polarimetric BRDFs of Real-world Materials"
+    year: 2025
     authors: "Yunseong Moon, Ryota Maeda, Suhyun Shin, Inseung Hwang, <b><u>Youngchan Kim</u></b>, Min H. Kim, Seung-Hwan Baek"
     venue: "SIGGRAPH Asia 2025"
     image: "assets/images/hpbrdf.png"
@@ -12,6 +13,7 @@ papers:
     dataset: "https://huggingface.co/datasets/yunseongmoon/Hyperspectral-Polarimetric-BRDF"
 
   - title: "Spectral and Polarization Vision: Spectro-polarimetric Real-world Dataset"
+    year: 2024
     authors: "Yujin Jeon*, Eunsue Choi*, <b><u>Youngchan Kim</u></b>, Yunseong Moon, Khalid Omer, Felix Heide, Seung-Hwan Baek"
     venue: "CVPR 2024 (highlight)"
     image: "assets/images/spdata.png"
@@ -20,6 +22,7 @@ papers:
     dataset: "https://huggingface.co/datasets/jyj7913/spectro-polarimetric"
 
   - title: "Neural Spectro-polarimetric Fields"
+    year: 2023
     authors: "<b><u>Youngchan Kim</u></b>, Wonjoon Jin, Sunghyun Cho, Seung-Hwan Baek"
     venue: "SIGGRAPH Asia 2023"
     image: "assets/images/nespof.png"
