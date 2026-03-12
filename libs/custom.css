@@ -99,7 +99,7 @@ body {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-decoration: none;
   color: inherit;
 }
@@ -108,7 +108,7 @@ body {
 }
 
 .brand-subtitle {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   color: rgba(0, 0, 0, 0.55);
   margin-top: 2px;
 }
