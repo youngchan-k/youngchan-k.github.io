@@ -170,13 +170,23 @@ body {
 /* ========== Sections ========== */
 .docs-section {
   border-top: 1px solid #eee;
-  padding: 2rem 0;
+  padding: 3rem 0;
   margin-bottom: 0;
   scroll-margin-top: 80px;
 }
 
 .docs-section h5 .fa {
   margin-right: 10px;
+}
+
+/* Link color in section content (About, News, etc.) */
+.docs-section a {
+  color: #1e40af;
+  text-decoration: none;
+}
+.docs-section a:hover {
+  color: #1e3a8a;
+  text-decoration: underline;
 }
 
 /* ========== News ========== */
